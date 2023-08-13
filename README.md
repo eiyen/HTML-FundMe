@@ -2,6 +2,8 @@
 
 这是一个基于以太坊的筹款项目。用户可以通过智能合约向项目捐款，并且只合约的所有者才能提取资金。
 
+本项目的详细介绍请参考[这篇文章](https://blog.csdn.net/weixin_42531317/article/details/132267996?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22132267996%22%2C%22source%22%3A%22weixin_42531317%22%7D)。
+
 ## 前提条件
 
 - [Node.js](https://nodejs.org/zh-cn/download)
