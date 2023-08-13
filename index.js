@@ -2,7 +2,7 @@ import { ethers } from "./ethers-5.7.esm.min.js";
 import { abi, contractAddress } from "./constants.js";
 
 const connectButton = document.getElementById("connectButton");
-const otherElement = document.getElementById("otherElement");
+const contractInteractions = document.getElementById("contractInteractions");
 const withdrawButton = document.getElementById("withdrawButton");
 const fundButton = document.getElementById("fundButton");
 const balanceButton = document.getElementById("balanceButton");
@@ -13,15 +13,15 @@ withdrawButton.onclick = withdraw;
 
 async function connect() {
     if (typeof window.ethereum !== "undefined") {
+        let accounts;
         try {
-            await ethereum.request({ method: "eth_requestAccounts" });
+            accounts = await ethereum.request({ method: "eth_requestAccounts" });
         } catch (error) {
             console.log(error);
         }
         connectButton.innerHTML = "已连接钱包";
-        const accounts = await ethereum.request({ method: "eth_accounts" });
         console.log(`已连接钱包: ${accounts}`);
-        otherElement.style.display = "inline";
+        contractInteractions.style.display = "inline";
     } else {
         connectButton.innerHTML = "请安装 Metamask 钱包";
     }
@@ -55,7 +55,6 @@ async function getBalance() {
 
 async function withdraw() {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    await provider.send(`eth_requestAccounts`, []);
     const signer = provider.getSigner();
     const contract = new ethers.Contract(contractAddress, abi, signer);
     try {
