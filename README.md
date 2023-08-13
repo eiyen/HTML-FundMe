@@ -17,7 +17,7 @@
 ### 1. 运行 Foundry-FundMe 项目
 
 ```shell
-# 导入 
+# 导入 Foundry-FundMe 项目
 git clone https://github.com/eiyen/Foundry-FundMe.git
 # 进入该项目
 code Foundry-FundMe
