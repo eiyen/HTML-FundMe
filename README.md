@@ -46,6 +46,6 @@ make deploy-anvil
 
 ![主页面](./images/home.png)
 
-连接钱包：
+连接钱包后：
 
-![连接钱包](./images/connectedWallet.png)
+![连接钱包后](./images/connectedWallet.png)
