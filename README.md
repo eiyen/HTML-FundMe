@@ -34,7 +34,7 @@ make deploy-anvil
 
 至此，成功在 Anvil 网络中部署 FundMe 合约。
 
-### 2. 运行 HTML-FundMe 项目：
+### 2. 运行 HTML-FundMe 项目
 
 点击 VSCode 右下角的 Live Server 即可启动项目。
 
